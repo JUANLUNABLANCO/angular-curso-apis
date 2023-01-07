@@ -1,8 +1,15 @@
 <app-nav></app-nav>
+<button (click)="createUser()">Crear Usuario</button>
+<button (click)="downloadPDF()">Descargar PDF</button>
+<p>
+    <input type="file" (change)="onUploadFile($event)"> Subir imagen
+    <img *ngIf="imgFile" [src]="imgFile" class="imgUploaded">
+</p>
+<!-- <button (click)="login()">Login Usuario</button>
+<button (click)="getProfile()">Obtener perfil</button> -->
 <app-products></app-products>
 <!-- <p><input type="text" [(ngModel)]="imgParent" /></p>
 <button (click)="toggleImg()">Toggle Img</button>
 <p>{{ showImg}}</p>
 <app-img *ngIf="showImg" (loaded)="onLoaded($event)" [img]="imgParent"></app-img>
 <hr/> -->
-

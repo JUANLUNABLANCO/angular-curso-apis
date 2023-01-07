@@ -20,6 +20,31 @@
     }
 }
 
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    button {
+        border: none;
+        border-radius: 0.3em;
+        padding: 1em 1.5em;
+        cursor: pointer;
+        background-color: rgb(200, 245, 198);
+    }
+    span {
+        text-align: center;
+        // line-height: 1rem;
+        padding: 1rem;
+        background-color: rgb(200, 245, 198);
+        font-family: 'Courier New', Courier, monospace;
+        color: black;
+        font-size: 700;
+        border-radius: .3em;
+    }
+}
+
 // tablets
 @media screen and (min-width: 40em) and (max-width: 63.9em) {
     .products--grid {

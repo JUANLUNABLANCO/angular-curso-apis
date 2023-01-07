@@ -13,7 +13,7 @@ export class StoreService {
 
   myCart$ = this.myCart.asObservable();
 
-  constructor() { }
+  // constructor() { }
 
   addProduct(product: Product) {
     this.myShoppingCart.push(product);

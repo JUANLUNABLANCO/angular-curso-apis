@@ -12,7 +12,7 @@ export class ProductComponent {
   @Input() product: Product = {
     id: '',
     price: 0,
-    images: [], // image es un array de imagenes
+    images: [],
     title: '',
     category: {
       id: '',
@@ -23,7 +23,7 @@ export class ProductComponent {
   @Output() addedProduct = new EventEmitter<Product>();
   @Output() showDetailProduct = new EventEmitter<string>();
 
-  constructor() { }
+  // constructor() { }
 
   onAddToCart() {
     this.addedProduct.emit(this.product);

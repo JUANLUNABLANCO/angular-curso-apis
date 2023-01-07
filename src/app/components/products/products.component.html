@@ -1,3 +1,4 @@
+<button (click)="createNewProduct()">Crear un producto nuevo</button>
 <div class="products--grid">
     <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)" (showDetailProduct)="onShowDetailProduct($event)"></app-product>
 </div>
@@ -5,6 +6,7 @@
     <div *ngIf="productChosen">
         <button (click)="toggleProductDetail()">Close</button>
         <h1>{{ productChosen.title }}</h1>
+        <h2>Code: {{ productChosen.id }}</h2>
         <!-- swipe slides effects here -->
         <swiper [slidesPerView]="1">
             <ng-template swiperSlide *ngFor="let img of productChosen.images">
@@ -13,5 +15,13 @@
         </swiper>
         <!-- swipe slides effects here -->
         <p>{{ productChosen.description }}</p>
+        <p>{{ productChosen.price | currency : 'EUR'}}</p>
+        <button (click)="updateOneProduct()">Actualizar este producto</button>
+        <button (click)="deleteProduct()">Borrar este producto</button>
     </div>
+</div>
+<div class="pagination">
+    <button (click)="pageDown()">Bajar página</button>
+    <span> {{ page + 1 }}</span>
+    <button (click)="pageUp()">Subir Página</button>
 </div>
